@@ -51,3 +51,17 @@ const charactersByEyeColor  = characters.reduce((acc, cur) => {
 //4. Get the total number of characters in all the character names
 const totalNameChar = characters.reduce((acc, cur)=> acc + cur.name.length, 0)
 console.log(totalNameChar)
+
+
+//5.Get total  gender
+const charactersByGender = characters.reduce((acc, cur) => {
+const gender = cur.gender;
+if(acc[gender]){
+    acc[gender] ++;
+}
+else {
+    acc[gender] = 1;
+}
+return acc }
+,{})
+console.log(charactersByGender)
