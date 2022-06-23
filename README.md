@@ -1,0 +1,1 @@
+Daily coding to keep my skills sharpened and up to date!
