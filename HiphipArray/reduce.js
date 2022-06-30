@@ -50,7 +50,7 @@ const charactersByEyeColor  = characters.reduce((acc, cur) => {
 // console.log(charactersByEyeColor)
 //4. Get the total number of characters in all the character names
 const totalNameChar = characters.reduce((acc, cur)=> acc + cur.name.length, 0)
-console.log(totalNameChar)
+// console.log(totalNameChar)
 
 
 //5.Get total  gender
@@ -64,4 +64,51 @@ else {
 }
 return acc }
 ,{})
-console.log(charactersByGender)
+// console.log(charactersByGender)
+
+const movies = [
+    {
+        genre: "comedy",
+        producers: 2,
+        actors: 6,
+        language: "Spanish",
+        closedCaption: true
+    },
+    {
+        genre: "horror",
+        producers: 1,
+        actors: 4,
+        language: "English",
+        closedCaption: true
+
+    },
+    {
+        genre: "horror",
+        producers: 1,
+        actors: 4,
+        language: "English",
+        closedCaption: true
+    }
+]
+
+const totalActors = movies.reduce((acc, cur) => {
+  return  acc + cur.actors
+}, 0)
+// console.log(totalActors)
+
+const totalProducers = movies.reduce((acc, cur) => 
+    acc + cur.producers
+, 0)
+// console.log(totalProducers)
+
+const languagesOfMoviesCount = movies.reduce((acc, cur)=>{
+    const movieLang = cur.language
+    if(acc[movieLang]){
+        acc[movieLang]++
+    }else{
+        acc[movieLang] = 1
+    }
+    return acc
+},{}
+)
+console.log(languagesOfMoviesCount)

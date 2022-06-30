@@ -13,17 +13,30 @@ let movies = ["Shrek", " Star Wars", " Bobs Burgers", " Everything Everywhere Al
 
 //Create an array of numbers. Loop through the array and add three to each number and replace the old number.
 let nums = [10,20,30]
+
+console.log(nums)
+
 nums.forEach((el,i) => {
-    console.log(el+3)//both work
-    
-    console.log(nums[i]+3)
+    // console.log(el+3)//both work
+
+    // console.log(nums[i]+3)
+    // console.log(nums[i] = el + 3)
 }
 )
 
 
 let numbers = [5, 13, 33, 67, 34]
+
+let sum = 0;
+numbers.forEach((num)=> {
+    sum += num;
+})
+console.log(sum/numbers.length)
+// console.log((5+13+33+67+34)/5)
+
+
 //Find the average of all the numbers from question three
-// let reduceNum = numbers.reduce((acc, cur) => 
-//  acc += cur
-// ,0 )/numbers.length-1
-// console.log(reduceNum)
+let reduceNum = numbers.reduce((acc, cur) => 
+ acc += cur
+,0 )/numbers.length
+console.log(reduceNum)
