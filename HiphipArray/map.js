@@ -29,20 +29,49 @@ const characters = [
     }
 ];
 //Map iterate through each character and transform item in some way --> returns another array resulting from previous arrays
+// const names = characters.map((character) => {
+//     return character.name
+// })
+// // console.log(names)
+// const heights = characters.map((character) => character.height)
+// // console.log(heights)
+
+// const minifiedRecords = characters.map(character => ({ 
+//     name: character.name,
+//     height: character.height
+// }))
+// // console.log(minifiedRecords)
+
+// const firstNames = characters.map((character) => 
+//     character.name.split(' ')[0]
+// )
+// console.log(firstNames)
+
+
+//Practicing more:
+//Array of all names
 const names = characters.map((character) => {
-    return character.name
+   return character.name;
 })
 // console.log(names)
-const heights = characters.map((character) => character.height)
-// console.log(heights)
 
-const minifiedRecords = characters.map(character => ({ 
-    name: character.name,
-    height: character.height
-}))
+//Get all heights
+const height = characters.map(character => {
+    return character.height
+})
+// console.log(height)
+
+//Get array of objs with just name and height prop
+const minifiedRecords = characters.map((character)=>{
+   return {
+        name: character.name,
+        height: character.height
+    }
+})
 // console.log(minifiedRecords)
 
-const firstNames = characters.map((character) => 
-    character.name.split(' ')[0]
-)
-// console.log(firstNames)
+//Get array of firstnames only
+const firstNames = characters.map((char)=>{
+    return char.name.split(' ')[0]
+})
+console.log(firstNames)
