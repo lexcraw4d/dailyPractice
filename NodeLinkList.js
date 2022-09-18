@@ -31,6 +31,7 @@ console.log(third)
 
 head.next = second; // Link first node with the second node
 console.log(head)
+// console.log(second)
 /* Now next of the first Node refers to the second.  So they
             both are linked.
  
@@ -42,8 +43,9 @@ console.log(head)
         +----+------+     +----+------+     +----+------+ */
 
 second.next = third; // Link second node with the third node
-console.log(second)
 console.log(head)
+// console.log(second)
+// console.log(third)
 /*  Now next of the second Node refers to third.  So all three
             nodes are linked.
  
