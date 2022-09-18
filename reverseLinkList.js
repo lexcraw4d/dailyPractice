@@ -19,14 +19,3 @@
 
 reverseList([ 1, 2, 3, 4, 5 ])
 
-// const reverseList = (head) => {
-//     let next = null
-//     let prev = null
-//     while( head != null){
-//         next = head.next
-//         head.next = prev
-//         prev = head
-//         head = next
-        
-//     }
-// }
